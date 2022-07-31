@@ -1,0 +1,607 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		11E7C5BA2896ABBE00314A93 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11E7C5B92896ABBE00314A93 /* AppDelegate.swift */; };
+		11E7C5BC2896ABBE00314A93 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11E7C5BB2896ABBE00314A93 /* SceneDelegate.swift */; };
+		11E7C5BE2896ABBE00314A93 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11E7C5BD2896ABBE00314A93 /* ViewController.swift */; };
+		11E7C5C12896ABBE00314A93 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11E7C5BF2896ABBE00314A93 /* Main.storyboard */; };
+		11E7C5C32896ABC000314A93 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 11E7C5C22896ABC000314A93 /* Assets.xcassets */; };
+		11E7C5C62896ABC000314A93 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11E7C5C42896ABC000314A93 /* LaunchScreen.storyboard */; };
+		11E7C5D12896ABC000314A93 /* SimpleFlickrBrowserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11E7C5D02896ABC000314A93 /* SimpleFlickrBrowserTests.swift */; };
+		11E7C5DB2896ABC000314A93 /* SimpleFlickrBrowserUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11E7C5DA2896ABC000314A93 /* SimpleFlickrBrowserUITests.swift */; };
+		11E7C5DD2896ABC000314A93 /* SimpleFlickrBrowserUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11E7C5DC2896ABC000314A93 /* SimpleFlickrBrowserUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		11E7C5CD2896ABC000314A93 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 11E7C5AE2896ABBE00314A93 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 11E7C5B52896ABBE00314A93;
+			remoteInfo = SimpleFlickrBrowser;
+		};
+		11E7C5D72896ABC000314A93 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 11E7C5AE2896ABBE00314A93 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 11E7C5B52896ABBE00314A93;
+			remoteInfo = SimpleFlickrBrowser;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		11E7C5B62896ABBE00314A93 /* SimpleFlickrBrowser.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleFlickrBrowser.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		11E7C5B92896ABBE00314A93 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		11E7C5BB2896ABBE00314A93 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		11E7C5BD2896ABBE00314A93 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		11E7C5C02896ABBE00314A93 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		11E7C5C22896ABC000314A93 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		11E7C5C52896ABC000314A93 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		11E7C5C72896ABC000314A93 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		11E7C5CC2896ABC000314A93 /* SimpleFlickrBrowserTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SimpleFlickrBrowserTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		11E7C5D02896ABC000314A93 /* SimpleFlickrBrowserTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleFlickrBrowserTests.swift; sourceTree = "<group>"; };
+		11E7C5D62896ABC000314A93 /* SimpleFlickrBrowserUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SimpleFlickrBrowserUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		11E7C5DA2896ABC000314A93 /* SimpleFlickrBrowserUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleFlickrBrowserUITests.swift; sourceTree = "<group>"; };
+		11E7C5DC2896ABC000314A93 /* SimpleFlickrBrowserUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleFlickrBrowserUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		11E7C5B32896ABBE00314A93 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		11E7C5C92896ABC000314A93 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		11E7C5D32896ABC000314A93 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		11E7C5AD2896ABBE00314A93 = {
+			isa = PBXGroup;
+			children = (
+				11E7C5B82896ABBE00314A93 /* SimpleFlickrBrowser */,
+				11E7C5CF2896ABC000314A93 /* SimpleFlickrBrowserTests */,
+				11E7C5D92896ABC000314A93 /* SimpleFlickrBrowserUITests */,
+				11E7C5B72896ABBE00314A93 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		11E7C5B72896ABBE00314A93 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				11E7C5B62896ABBE00314A93 /* SimpleFlickrBrowser.app */,
+				11E7C5CC2896ABC000314A93 /* SimpleFlickrBrowserTests.xctest */,
+				11E7C5D62896ABC000314A93 /* SimpleFlickrBrowserUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		11E7C5B82896ABBE00314A93 /* SimpleFlickrBrowser */ = {
+			isa = PBXGroup;
+			children = (
+				11E7C5B92896ABBE00314A93 /* AppDelegate.swift */,
+				11E7C5BB2896ABBE00314A93 /* SceneDelegate.swift */,
+				11E7C5BD2896ABBE00314A93 /* ViewController.swift */,
+				11E7C5BF2896ABBE00314A93 /* Main.storyboard */,
+				11E7C5C22896ABC000314A93 /* Assets.xcassets */,
+				11E7C5C42896ABC000314A93 /* LaunchScreen.storyboard */,
+				11E7C5C72896ABC000314A93 /* Info.plist */,
+			);
+			path = SimpleFlickrBrowser;
+			sourceTree = "<group>";
+		};
+		11E7C5CF2896ABC000314A93 /* SimpleFlickrBrowserTests */ = {
+			isa = PBXGroup;
+			children = (
+				11E7C5D02896ABC000314A93 /* SimpleFlickrBrowserTests.swift */,
+			);
+			path = SimpleFlickrBrowserTests;
+			sourceTree = "<group>";
+		};
+		11E7C5D92896ABC000314A93 /* SimpleFlickrBrowserUITests */ = {
+			isa = PBXGroup;
+			children = (
+				11E7C5DA2896ABC000314A93 /* SimpleFlickrBrowserUITests.swift */,
+				11E7C5DC2896ABC000314A93 /* SimpleFlickrBrowserUITestsLaunchTests.swift */,
+			);
+			path = SimpleFlickrBrowserUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		11E7C5B52896ABBE00314A93 /* SimpleFlickrBrowser */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 11E7C5E02896ABC000314A93 /* Build configuration list for PBXNativeTarget "SimpleFlickrBrowser" */;
+			buildPhases = (
+				11E7C5B22896ABBE00314A93 /* Sources */,
+				11E7C5B32896ABBE00314A93 /* Frameworks */,
+				11E7C5B42896ABBE00314A93 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SimpleFlickrBrowser;
+			productName = SimpleFlickrBrowser;
+			productReference = 11E7C5B62896ABBE00314A93 /* SimpleFlickrBrowser.app */;
+			productType = "com.apple.product-type.application";
+		};
+		11E7C5CB2896ABC000314A93 /* SimpleFlickrBrowserTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 11E7C5E32896ABC000314A93 /* Build configuration list for PBXNativeTarget "SimpleFlickrBrowserTests" */;
+			buildPhases = (
+				11E7C5C82896ABC000314A93 /* Sources */,
+				11E7C5C92896ABC000314A93 /* Frameworks */,
+				11E7C5CA2896ABC000314A93 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				11E7C5CE2896ABC000314A93 /* PBXTargetDependency */,
+			);
+			name = SimpleFlickrBrowserTests;
+			productName = SimpleFlickrBrowserTests;
+			productReference = 11E7C5CC2896ABC000314A93 /* SimpleFlickrBrowserTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		11E7C5D52896ABC000314A93 /* SimpleFlickrBrowserUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 11E7C5E62896ABC000314A93 /* Build configuration list for PBXNativeTarget "SimpleFlickrBrowserUITests" */;
+			buildPhases = (
+				11E7C5D22896ABC000314A93 /* Sources */,
+				11E7C5D32896ABC000314A93 /* Frameworks */,
+				11E7C5D42896ABC000314A93 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				11E7C5D82896ABC000314A93 /* PBXTargetDependency */,
+			);
+			name = SimpleFlickrBrowserUITests;
+			productName = SimpleFlickrBrowserUITests;
+			productReference = 11E7C5D62896ABC000314A93 /* SimpleFlickrBrowserUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		11E7C5AE2896ABBE00314A93 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1340;
+				LastUpgradeCheck = 1340;
+				TargetAttributes = {
+					11E7C5B52896ABBE00314A93 = {
+						CreatedOnToolsVersion = 13.4.1;
+					};
+					11E7C5CB2896ABC000314A93 = {
+						CreatedOnToolsVersion = 13.4.1;
+						TestTargetID = 11E7C5B52896ABBE00314A93;
+					};
+					11E7C5D52896ABC000314A93 = {
+						CreatedOnToolsVersion = 13.4.1;
+						TestTargetID = 11E7C5B52896ABBE00314A93;
+					};
+				};
+			};
+			buildConfigurationList = 11E7C5B12896ABBE00314A93 /* Build configuration list for PBXProject "SimpleFlickrBrowser" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 11E7C5AD2896ABBE00314A93;
+			productRefGroup = 11E7C5B72896ABBE00314A93 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				11E7C5B52896ABBE00314A93 /* SimpleFlickrBrowser */,
+				11E7C5CB2896ABC000314A93 /* SimpleFlickrBrowserTests */,
+				11E7C5D52896ABC000314A93 /* SimpleFlickrBrowserUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		11E7C5B42896ABBE00314A93 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				11E7C5C62896ABC000314A93 /* LaunchScreen.storyboard in Resources */,
+				11E7C5C32896ABC000314A93 /* Assets.xcassets in Resources */,
+				11E7C5C12896ABBE00314A93 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		11E7C5CA2896ABC000314A93 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		11E7C5D42896ABC000314A93 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		11E7C5B22896ABBE00314A93 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				11E7C5BE2896ABBE00314A93 /* ViewController.swift in Sources */,
+				11E7C5BA2896ABBE00314A93 /* AppDelegate.swift in Sources */,
+				11E7C5BC2896ABBE00314A93 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		11E7C5C82896ABC000314A93 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				11E7C5D12896ABC000314A93 /* SimpleFlickrBrowserTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		11E7C5D22896ABC000314A93 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				11E7C5DD2896ABC000314A93 /* SimpleFlickrBrowserUITestsLaunchTests.swift in Sources */,
+				11E7C5DB2896ABC000314A93 /* SimpleFlickrBrowserUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		11E7C5CE2896ABC000314A93 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 11E7C5B52896ABBE00314A93 /* SimpleFlickrBrowser */;
+			targetProxy = 11E7C5CD2896ABC000314A93 /* PBXContainerItemProxy */;
+		};
+		11E7C5D82896ABC000314A93 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 11E7C5B52896ABBE00314A93 /* SimpleFlickrBrowser */;
+			targetProxy = 11E7C5D72896ABC000314A93 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		11E7C5BF2896ABBE00314A93 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				11E7C5C02896ABBE00314A93 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		11E7C5C42896ABC000314A93 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				11E7C5C52896ABC000314A93 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		11E7C5DE2896ABC000314A93 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		11E7C5DF2896ABC000314A93 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		11E7C5E12896ABC000314A93 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 6M42362VT3;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SimpleFlickrBrowser/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Eslami.SimpleFlickrBrowser;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		11E7C5E22896ABC000314A93 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 6M42362VT3;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SimpleFlickrBrowser/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Eslami.SimpleFlickrBrowser;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		11E7C5E42896ABC000314A93 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 6M42362VT3;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Eslami.SimpleFlickrBrowserTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SimpleFlickrBrowser.app/SimpleFlickrBrowser";
+			};
+			name = Debug;
+		};
+		11E7C5E52896ABC000314A93 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 6M42362VT3;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Eslami.SimpleFlickrBrowserTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SimpleFlickrBrowser.app/SimpleFlickrBrowser";
+			};
+			name = Release;
+		};
+		11E7C5E72896ABC000314A93 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 6M42362VT3;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Eslami.SimpleFlickrBrowserUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = SimpleFlickrBrowser;
+			};
+			name = Debug;
+		};
+		11E7C5E82896ABC000314A93 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 6M42362VT3;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Eslami.SimpleFlickrBrowserUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = SimpleFlickrBrowser;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		11E7C5B12896ABBE00314A93 /* Build configuration list for PBXProject "SimpleFlickrBrowser" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				11E7C5DE2896ABC000314A93 /* Debug */,
+				11E7C5DF2896ABC000314A93 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		11E7C5E02896ABC000314A93 /* Build configuration list for PBXNativeTarget "SimpleFlickrBrowser" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				11E7C5E12896ABC000314A93 /* Debug */,
+				11E7C5E22896ABC000314A93 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		11E7C5E32896ABC000314A93 /* Build configuration list for PBXNativeTarget "SimpleFlickrBrowserTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				11E7C5E42896ABC000314A93 /* Debug */,
+				11E7C5E52896ABC000314A93 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		11E7C5E62896ABC000314A93 /* Build configuration list for PBXNativeTarget "SimpleFlickrBrowserUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				11E7C5E72896ABC000314A93 /* Debug */,
+				11E7C5E82896ABC000314A93 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 11E7C5AE2896ABBE00314A93 /* Project object */;
+}
