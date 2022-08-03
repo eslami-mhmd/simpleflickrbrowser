@@ -1,0 +1,14 @@
+/* 
+  Localizable.strings
+  SimpleFlickrBrowser
+
+  Created by Mohammad Eslami on 8/3/22.
+  
+*/
+// MARK: - General
+"OK" = "OK";
+"Cancel" = "Cancel";
+
+// MARK: - FlickrListController
+"FlickrListController.title" = "Flickr Browser";
+"FlickrListController.Search" = "Search";

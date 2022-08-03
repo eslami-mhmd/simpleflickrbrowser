@@ -15,8 +15,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         if #unavailable(iOS 13.0) {
             window = UIWindow(frame: UIScreen.main.bounds)
-            let rootViewController = FlickrListController(nibName: nil, bundle: nil)
-            window!.rootViewController = rootViewController
+            let rootViewController = FlickrListController(viewModel: FlickrListViewModel(repository: FlickrRepository()))
+            let navController = UINavigationController()
+            navController.viewControllers = [rootViewController]
+            window!.rootViewController = navController
             window!.makeKeyAndVisible()
         }
         return true
