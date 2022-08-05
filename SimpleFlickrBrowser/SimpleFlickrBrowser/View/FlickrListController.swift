@@ -5,29 +5,22 @@
 //  Created by Mohammad Eslami on 7/31/22.
 //
 
-import Combine
 import UIKit
 import RxSwift
-
-class DirectionSupportedCollectionViewFlowLayout: UICollectionViewFlowLayout {
-    override var flipsHorizontallyInOppositeLayoutDirection: Bool {
-        return true
-    }
-}
 
 class FlickrListController: UIViewController, UICollectionViewDelegate {
     // MARK: Properties
     private var disposeBag = DisposeBag()
-    private lazy var cellWidth: Double = 80
-    private let offset: Double = 15
-    var viewModel: FlickrListViewModel
-
-    let searchController = UISearchController(searchResultsController: nil)
-    private lazy var newFlowLayout: DirectionSupportedCollectionViewFlowLayout = {
-        let layout = DirectionSupportedCollectionViewFlowLayout()
-        layout.itemSize = .init(width: cellWidth, height: cellWidth)
-        layout.minimumLineSpacing = offset
-        layout.minimumInteritemSpacing = offset
+    private let cellOffset: Double = 5
+    private let horizontalOffset: Double = 10
+    private let verticalOffset: Double = 10
+    private var viewModel: FlickrListViewModel
+    private let searchController = UISearchController(searchResultsController: nil)
+    private lazy var newFlowLayout: UICollectionViewFlowLayout = {
+        let layout = UICollectionViewFlowLayout()
+        layout.itemSize = .init(width: 120, height: 120)
+        layout.minimumLineSpacing = cellOffset
+        layout.minimumInteritemSpacing = cellOffset
         return layout
     }()
     private(set) lazy var collectionView: UICollectionView = {
@@ -51,25 +44,18 @@ class FlickrListController: UIViewController, UICollectionViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupViews()
-        bind()
-        viewModel.mockPhotos()
+        binds()
     }
 }
 
 // MARK: Private methods
 private extension FlickrListController {
     func setupViews() {
-        setupSearchController()
         navigationItem.title = "FlickrListController.title".localized
         view.backgroundColor = .lightGray
 
-        view.addSubview(collectionView)
-        collectionView.snp.makeConstraints { snp in
-            snp.top.equalTo(view.safeAreaLayoutGuide.snp.top)
-            snp.bottom.equalTo(view.safeAreaLayoutGuide.snp.bottom)
-            snp.leading.equalTo(view.safeAreaLayoutGuide.snp.leading)
-            snp.trailing.equalTo(view.safeAreaLayoutGuide.snp.trailing)
-        }
+        setupSearchController()
+        setupCollectionView()
     }
 
     func setupSearchController() {
@@ -79,41 +65,65 @@ private extension FlickrListController {
         navigationItem.searchController = searchController
         definesPresentationContext = true
     }
+    
+    func setupCollectionView() {
+        view.addSubview(collectionView)
+        collectionView.snp.makeConstraints { snp in
+            snp.top.equalTo(view.safeAreaLayoutGuide.snp.top).offset(verticalOffset)
+            snp.bottom.equalTo(view.safeAreaLayoutGuide.snp.bottom).offset(-verticalOffset)
+            snp.leading.equalTo(view.safeAreaLayoutGuide.snp.leading).offset(horizontalOffset)
+            snp.trailing.equalTo(view.safeAreaLayoutGuide.snp.trailing).offset(-horizontalOffset)
+        }
+    }
 
-    func bind() {
+    func binds() {
+        bindErrors()
+        bindCollectionView()
+    }
+    
+    func bindErrors() {
         viewModel.error.subscribe(onNext: { error in
             print(error)
         }).disposed(by: disposeBag)
-        
+    }
+    
+    func bindCollectionView() {
         collectionView.rx
             .setDelegate(self)
             .disposed(by: disposeBag)
         
-        viewModel.flickrItemsBehavior.asObservable()
+        viewModel.flickrPhotosBehavior.asObservable()
             .bind(to: collectionView.rx
                     .items(cellIdentifier: FlickrListCell.reuseIdentifier,
                            cellType: FlickrListCell.self))
-        { index, element, cell in
+        { [weak self] index, element, cell in
             cell.setData(data: element)
+            if self?.shouldGetNextPage(for: index) == true {
+                self?.viewModel.getNextPage()
+            }
         }
         .disposed(by: disposeBag)
         
         collectionView
             .rx
             .itemSelected
-                .subscribe(onNext:{ [weak self] indexPath in
+                .subscribe(onNext:{ indexPath in
                     print("\(indexPath) tapped")
-                    if let item = self?.viewModel.flickrItemsBehavior.value[safe: indexPath.item] {
-                    }
                 }).disposed(by: disposeBag)
-
+    }
+    
+    func shouldGetNextPage(for index: Int) -> Bool {
+        let offset = 10
+        let count = viewModel.flickrPhotosBehavior.value.count
+        return count > 0 && index >= count - offset
     }
 }
 
 // MARK: UISearchResultsUpdating
 extension FlickrListController: UISearchResultsUpdating {
   func updateSearchResults(for searchController: UISearchController) {
-      viewModel.updateSearchValue(value: searchController.searchBar.text)
+      if let searchText = searchController.searchBar.text, !searchText.isEmpty {
+          viewModel.updateSearchValue(value: searchText)
+      }
   }
 }
-

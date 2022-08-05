@@ -5,22 +5,9 @@
 //  Created by Mohammad Eslami on 8/1/22.
 //
 
-import Foundation
 import Kingfisher
-import RxSwift
-import RxCocoa
 import SnapKit
 import UIKit
-
-protocol ReuseIdentifierProtocol {
-    static var reuseIdentifier: String { get }
-}
-
-extension ReuseIdentifierProtocol {
-    static var reuseIdentifier: String {
-        return String(describing: Self.self)
-    }
-}
 
 class FlickrListCell: UICollectionViewCell, ReuseIdentifierProtocol {
     private lazy var imageView: UIImageView = {
@@ -38,9 +25,9 @@ class FlickrListCell: UICollectionViewCell, ReuseIdentifierProtocol {
         super.init(coder: coder)
     }
     
-    func setData(data: FlickrItemData) {
+    func setData(data: FlickrPhoto) {
         setDefaultCellContents()
-        if let url = URL(string: data.imageAddress) {
+        if let url = data.smallSizeURL {
             imageView.kf.setImage(with: url)
         }
     }
@@ -50,7 +37,6 @@ private extension FlickrListCell {
     func setupViews() {
         backgroundColor = .clear
         contentView.addSubview(imageView)
-        
         imageView.snp.makeConstraints { snp in
             snp.edges.edges.equalToSuperview()
         }

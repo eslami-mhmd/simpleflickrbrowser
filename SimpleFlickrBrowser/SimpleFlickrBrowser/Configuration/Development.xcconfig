@@ -1,0 +1,11 @@
+//
+//  Development.xcconfig
+//  SimpleFlickrBrowser
+//
+//  Created by Mohammad Eslami on 8/4/22.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+
+BASE_URL = api.flickr.com/services/rest/

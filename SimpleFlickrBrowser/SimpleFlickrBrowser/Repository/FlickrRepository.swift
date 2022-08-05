@@ -9,7 +9,14 @@ import Foundation
 import RxSwift
 
 protocol FlickrRepositoryProtocol {
+    func searchPhotos(model: SearchRequestModel) -> Observable<SearchResponseModel>
 }
 
 struct FlickrRepository: FlickrRepositoryProtocol {
+    func searchPhotos(model: SearchRequestModel) -> Observable<SearchResponseModel> {
+        NetworkService.default.request(
+            PhotosEndPoint.search(model: model),
+            model: SearchResponseModel.self
+        ).asObservable()
+    }
 }

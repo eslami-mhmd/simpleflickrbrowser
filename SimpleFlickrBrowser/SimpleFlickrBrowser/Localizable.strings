@@ -9,6 +9,10 @@
 "OK" = "OK";
 "Cancel" = "Cancel";
 
+// MARK: - Error
+"Error.General" = "An Error Occured.";
+"Error.NoInternet" = "No Internet Connection.";
+
 // MARK: - FlickrListController
 "FlickrListController.title" = "Flickr Browser";
 "FlickrListController.Search" = "Search";
