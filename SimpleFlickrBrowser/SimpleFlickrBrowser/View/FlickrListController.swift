@@ -77,13 +77,23 @@ private extension FlickrListController {
     }
 
     func binds() {
+        bindFetchingState()
         bindErrors()
         bindCollectionView()
+    }
+    
+    func bindFetchingState() {
+        viewModel.isFetchingBehavior.asObservable()
+            .subscribe { isFetching in
+                print(isFetching)
+                // TODO: - show activity indicator
+        }.disposed(by: disposeBag)
     }
     
     func bindErrors() {
         viewModel.error.subscribe(onNext: { error in
             print(error)
+            // TODO: - show error in a proper UI like toast
         }).disposed(by: disposeBag)
     }
     

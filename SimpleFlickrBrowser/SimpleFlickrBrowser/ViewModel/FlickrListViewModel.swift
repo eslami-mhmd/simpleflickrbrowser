@@ -14,8 +14,8 @@ class FlickrListViewModel {
     private var disposeBag = DisposeBag()
     private var repository: FlickrRepositoryProtocol
     let error = PublishSubject<String>()
-    var flickrPhotosBehavior = BehaviorRelay<[FlickrPhoto]>(value: [])
-    private var isFetching = false
+    let flickrPhotosBehavior = BehaviorRelay<[FlickrPhoto]>(value: [])
+    let isFetchingBehavior = BehaviorRelay<Bool>(value: false)
     private var totalPages: Int = 0
     private var currentPage: Int = 0
     private var searchedValue = BehaviorRelay<String?>(value: nil)
@@ -27,7 +27,7 @@ class FlickrListViewModel {
     
     func searchPhotos(text: String, pageNo: Int = 1) {
         let model = SearchRequestModel(text: text, page: pageNo)
-        isFetching = true
+        isFetchingBehavior.accept(true)
         repository.searchPhotos(model: model)
             .observe(on: MainScheduler.instance)
             .subscribe(onNext: { [weak self] responseResult in
@@ -35,7 +35,7 @@ class FlickrListViewModel {
                 guard let strongSelf = self else {
                     return
                 }
-                strongSelf.isFetching = false
+                strongSelf.isFetchingBehavior.accept(false)
                 if responseResult.stat == .fail {
                     strongSelf.error.onNext(responseResult.message ?? "Error.General".localized)
                 } else if let photos = responseResult.photos {
@@ -54,7 +54,7 @@ class FlickrListViewModel {
                 }
             }, onError: { [weak self] error in
                 print(error)
-                self?.isFetching = false
+                self?.isFetchingBehavior.accept(false)
                 if error as? NetworkError == NetworkError.noInternet {
                     self?.error.onNext("Error.NoInternet".localized)
                 } else {
@@ -82,7 +82,7 @@ class FlickrListViewModel {
     
     func getNextPage() {
         if currentPage + 1 <= totalPages {
-            if !isFetching, let lastSearchedValue = searchedValue.value {
+            if !isFetchingBehavior.value, let lastSearchedValue = searchedValue.value {
                 searchPhotos(text: lastSearchedValue, pageNo: currentPage + 1)
             }
         }
