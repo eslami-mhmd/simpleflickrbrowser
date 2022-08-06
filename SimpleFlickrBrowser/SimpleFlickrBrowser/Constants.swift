@@ -16,6 +16,7 @@ struct Constants {
     
     struct Network {
         static let api_key = ""
+        static let retryCount = 1
         static let format: ResponseFormat = .json
         static let nojsoncallback: Int = 1
     }
