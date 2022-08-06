@@ -26,4 +26,16 @@ class BasicRequestInterceptor: RequestInterceptor {
             .data(using: String.Encoding.utf8)?
             .base64EncodedString()
     }
+    
+    func retry(_ request: Request, for session: Session, dueTo error: Error, completion: @escaping (RetryResult) -> Void) {
+        if (((error as? AFError)?.underlyingError) as? URLError)?.code == .some(.timedOut) {
+            guard request.retryCount < Constants.Network.retryCount else {
+                completion(.doNotRetry)
+                return
+            }
+            completion(.retry)
+        } else {
+            completion(.doNotRetry)
+        }
+    }
 }

@@ -27,7 +27,8 @@ class SessionManager {
             )
         case .none:
             return Alamofire.Session(
-                configuration: URLSessionConfiguration.default
+                configuration: URLSessionConfiguration.default,
+                interceptor: NoAuthRequestInterceptor()
             )
         }
     }

@@ -1,21 +1,16 @@
 //
-//  BearerRequestInterceptor.swift
+//  NoAuthRequestInterceptor.swift
 //  SimpleFlickrBrowser
 //
 //  Created by Mohammad Eslami on 8/6/22.
 //
 
-import Foundation
 import Alamofire
-import RxSwift
+import Foundation
 
-class BearerRequestInterceptor: RequestInterceptor {
+class NoAuthRequestInterceptor: RequestInterceptor {
     func adapt(_ urlRequest: URLRequest, for session: Session, completion: @escaping (Result<URLRequest, Error>) -> Void) {
-        var adaptedRequest = urlRequest
-        if let accessToken = KeyChain.loadAsString(key: Constants.KeyChain.accessToken) {
-            adaptedRequest.setValue("Bearer \(accessToken)", forHTTPHeaderField: "Authorization")
-        }
-        completion(.success(adaptedRequest))
+        completion(.success(urlRequest))
     }
 
     func retry(_ request: Request, for session: Session, dueTo error: Error, completion: @escaping (RetryResult) -> Void) {
