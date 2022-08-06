@@ -11,6 +11,10 @@
 		1154AD67289B994A0068355D /* Development.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 1154AD66289B994A0068355D /* Development.xcconfig */; };
 		11986EF6289E3452002E8C5F /* PhotoDetailsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11986EF5289E3452002E8C5F /* PhotoDetailsController.swift */; };
 		11986EF8289E3664002E8C5F /* PhotoDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11986EF7289E3664002E8C5F /* PhotoDetailsViewModel.swift */; };
+		11986EFA289E7AD2002E8C5F /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11986EF9289E7AD2002E8C5F /* SessionManager.swift */; };
+		11986EFD289E7BA6002E8C5F /* BasicRequestInterceptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11986EFC289E7BA6002E8C5F /* BasicRequestInterceptor.swift */; };
+		11986EFF289E7BD4002E8C5F /* BearerRequestInterceptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11986EFE289E7BD4002E8C5F /* BearerRequestInterceptor.swift */; };
+		11986F01289E92CA002E8C5F /* KeyChain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11986F00289E92CA002E8C5F /* KeyChain.swift */; };
 		119A43A4289A72C4002DBD30 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 119A43A3289A72C4002DBD30 /* Localizable.strings */; };
 		119A43A9289AD862002DBD30 /* URLRequestBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 119A43A8289AD862002DBD30 /* URLRequestBuilder.swift */; };
 		119A43AB289AD8B9002DBD30 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 119A43AA289AD8B9002DBD30 /* Service.swift */; };
@@ -65,6 +69,10 @@
 		1154AD66289B994A0068355D /* Development.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Development.xcconfig; sourceTree = "<group>"; };
 		11986EF5289E3452002E8C5F /* PhotoDetailsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoDetailsController.swift; sourceTree = "<group>"; };
 		11986EF7289E3664002E8C5F /* PhotoDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoDetailsViewModel.swift; sourceTree = "<group>"; };
+		11986EF9289E7AD2002E8C5F /* SessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionManager.swift; sourceTree = "<group>"; };
+		11986EFC289E7BA6002E8C5F /* BasicRequestInterceptor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicRequestInterceptor.swift; sourceTree = "<group>"; };
+		11986EFE289E7BD4002E8C5F /* BearerRequestInterceptor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BearerRequestInterceptor.swift; sourceTree = "<group>"; };
+		11986F00289E92CA002E8C5F /* KeyChain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyChain.swift; sourceTree = "<group>"; };
 		119A43A3289A72C4002DBD30 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		119A43A8289AD862002DBD30 /* URLRequestBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLRequestBuilder.swift; sourceTree = "<group>"; };
 		119A43AA289AD8B9002DBD30 /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
@@ -126,13 +134,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		11986EFB289E7B7E002E8C5F /* Interceptor */ = {
+			isa = PBXGroup;
+			children = (
+				11986EFC289E7BA6002E8C5F /* BasicRequestInterceptor.swift */,
+				11986EFE289E7BD4002E8C5F /* BearerRequestInterceptor.swift */,
+			);
+			path = Interceptor;
+			sourceTree = "<group>";
+		};
 		119A43A5289AD752002DBD30 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				11986EFB289E7B7E002E8C5F /* Interceptor */,
 				119A43A7289AD75F002DBD30 /* Endpoint */,
 				119A43A6289AD758002DBD30 /* Models */,
 				119A43A8289AD862002DBD30 /* URLRequestBuilder.swift */,
 				119A43AA289AD8B9002DBD30 /* Service.swift */,
+				11986EF9289E7AD2002E8C5F /* SessionManager.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -225,6 +244,7 @@
 				11E7C5B92896ABBE00314A93 /* AppDelegate.swift */,
 				11E7C5BB2896ABBE00314A93 /* SceneDelegate.swift */,
 				11AB5410289D25D600957216 /* Constants.swift */,
+				11986F00289E92CA002E8C5F /* KeyChain.swift */,
 				11E7C5C22896ABC000314A93 /* Assets.xcassets */,
 				11E7C5C42896ABC000314A93 /* LaunchScreen.storyboard */,
 				11E7C5C72896ABC000314A93 /* Info.plist */,
@@ -417,14 +437,18 @@
 			files = (
 				11ADB73C28985BD4001AF1CA /* String+Extension.swift in Sources */,
 				11ADCFC82897F1C000D83CDA /* Collection+Extension.swift in Sources */,
+				11986EFF289E7BD4002E8C5F /* BearerRequestInterceptor.swift in Sources */,
 				11ECA2C1289B9D7700C11B65 /* PhotosEndpoint.swift in Sources */,
 				11ECA2C8289BC35E00C11B65 /* SearchResponseModel.swift in Sources */,
 				11ECA2C5289BC07800C11B65 /* Encodable+Extension.swift in Sources */,
 				119A43A9289AD862002DBD30 /* URLRequestBuilder.swift in Sources */,
+				11986F01289E92CA002E8C5F /* KeyChain.swift in Sources */,
 				11E7C5BE2896ABBE00314A93 /* FlickrListController.swift in Sources */,
+				11986EFD289E7BA6002E8C5F /* BasicRequestInterceptor.swift in Sources */,
 				11ADCFBA2897C91600D83CDA /* FlickrListCell.swift in Sources */,
 				11ADCFCB289801C500D83CDA /* FlickrRepository.swift in Sources */,
 				11E7C5BA2896ABBE00314A93 /* AppDelegate.swift in Sources */,
+				11986EFA289E7AD2002E8C5F /* SessionManager.swift in Sources */,
 				119A43AB289AD8B9002DBD30 /* Service.swift in Sources */,
 				11986EF6289E3452002E8C5F /* PhotoDetailsController.swift in Sources */,
 				11986EF8289E3664002E8C5F /* PhotoDetailsViewModel.swift in Sources */,

@@ -12,9 +12,15 @@ protocol FlickrRepositoryProtocol {
     func searchPhotos(model: SearchRequestModel) -> Observable<SearchResponseModel>
 }
 
-struct FlickrRepository: FlickrRepositoryProtocol {
+class FlickrRepository: FlickrRepositoryProtocol {
+    private let networkService: NetworkServiceProtocol
+    
+    init(networkService: NetworkServiceProtocol = NetworkService()) {
+        self.networkService = networkService
+    }
+    
     func searchPhotos(model: SearchRequestModel) -> Observable<SearchResponseModel> {
-        NetworkService.default.request(
+        networkService.request(
             PhotosEndPoint.search(model: model),
             model: SearchResponseModel.self
         ).asObservable()

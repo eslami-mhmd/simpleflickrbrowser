@@ -9,6 +9,7 @@ import Alamofire
 import Foundation
 
 protocol URLRequestBuilder: URLRequestConvertible {
+    var authType: AuthType { get }
     var baseURL: URL { get }
     var requestURL: URL { get }
     var path: String { get }
@@ -19,6 +20,10 @@ protocol URLRequestBuilder: URLRequestConvertible {
 }
 
 extension URLRequestBuilder {
+    var authType: AuthType {
+        return .none
+    }
+
     var baseURL: URL {
         return try! URL(string: "https://" + Configuration.value(for: "BASE_URL"))!
     }

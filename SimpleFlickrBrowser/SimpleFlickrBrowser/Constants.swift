@@ -8,6 +8,12 @@
 import Foundation
 
 struct Constants {
+    struct KeyChain {
+        static let accessToken = "accessToken"
+        static let clientId = "clientId"
+        static let clientSecret = "clientSecret"
+    }
+    
     struct Network {
         static let api_key = ""
         static let format: ResponseFormat = .json
