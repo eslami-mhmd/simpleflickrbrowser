@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		1100F03B289C097100058E4B /* APIRequestProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1100F03A289C097100058E4B /* APIRequestProtocol.swift */; };
 		1154AD67289B994A0068355D /* Development.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 1154AD66289B994A0068355D /* Development.xcconfig */; };
+		11986EF6289E3452002E8C5F /* PhotoDetailsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11986EF5289E3452002E8C5F /* PhotoDetailsController.swift */; };
+		11986EF8289E3664002E8C5F /* PhotoDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11986EF7289E3664002E8C5F /* PhotoDetailsViewModel.swift */; };
 		119A43A4289A72C4002DBD30 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 119A43A3289A72C4002DBD30 /* Localizable.strings */; };
 		119A43A9289AD862002DBD30 /* URLRequestBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 119A43A8289AD862002DBD30 /* URLRequestBuilder.swift */; };
 		119A43AB289AD8B9002DBD30 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 119A43AA289AD8B9002DBD30 /* Service.swift */; };
@@ -61,6 +63,8 @@
 /* Begin PBXFileReference section */
 		1100F03A289C097100058E4B /* APIRequestProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRequestProtocol.swift; sourceTree = "<group>"; };
 		1154AD66289B994A0068355D /* Development.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Development.xcconfig; sourceTree = "<group>"; };
+		11986EF5289E3452002E8C5F /* PhotoDetailsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoDetailsController.swift; sourceTree = "<group>"; };
+		11986EF7289E3664002E8C5F /* PhotoDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoDetailsViewModel.swift; sourceTree = "<group>"; };
 		119A43A3289A72C4002DBD30 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		119A43A8289AD862002DBD30 /* URLRequestBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLRequestBuilder.swift; sourceTree = "<group>"; };
 		119A43AA289AD8B9002DBD30 /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
@@ -156,6 +160,7 @@
 			children = (
 				11E7C5BD2896ABBE00314A93 /* FlickrListController.swift */,
 				11ADCFB92897C91600D83CDA /* FlickrListCell.swift */,
+				11986EF5289E3452002E8C5F /* PhotoDetailsController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -164,6 +169,7 @@
 			isa = PBXGroup;
 			children = (
 				11ADCFB72897B1C700D83CDA /* FlickrListViewModel.swift */,
+				11986EF7289E3664002E8C5F /* PhotoDetailsViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -420,6 +426,8 @@
 				11ADCFCB289801C500D83CDA /* FlickrRepository.swift in Sources */,
 				11E7C5BA2896ABBE00314A93 /* AppDelegate.swift in Sources */,
 				119A43AB289AD8B9002DBD30 /* Service.swift in Sources */,
+				11986EF6289E3452002E8C5F /* PhotoDetailsController.swift in Sources */,
+				11986EF8289E3664002E8C5F /* PhotoDetailsViewModel.swift in Sources */,
 				11ECA2C3289BC03300C11B65 /* SearchRequestModel.swift in Sources */,
 				1100F03B289C097100058E4B /* APIRequestProtocol.swift in Sources */,
 				11ADCFB82897B1C700D83CDA /* FlickrListViewModel.swift in Sources */,
@@ -603,8 +611,9 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = "";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -631,8 +640,9 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = "";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
