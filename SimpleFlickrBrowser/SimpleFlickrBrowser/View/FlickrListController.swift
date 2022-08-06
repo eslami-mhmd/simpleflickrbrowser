@@ -41,6 +41,7 @@ class FlickrListController: UIViewController, UICollectionViewDelegate {
         collectionView.showsHorizontalScrollIndicator = false
         collectionView.showsVerticalScrollIndicator = false
         collectionView.register(FlickrListCell.self, forCellWithReuseIdentifier: FlickrListCell.reuseIdentifier)
+        collectionView.keyboardDismissMode = .onDrag
         return collectionView
     }()
     // MARK: Life cycle methods
